@@ -5,19 +5,19 @@ export function renderAffirmations(listAffirmations) {
         <div class="affirmations-container">
           <div class="affirmations-details">
             <div class="affirmations-title limit-text-to-2-lines">
-              ${affirmations.title}
+               ${affirmations.title}
             </div>
             <div class="affirmations-category">
-               ${affirmations.categories.join(", ")}
+              Category: ${affirmations.categories.join(", ")}
             </div>
             <div class="affirmations-description">
-              Rating: ${affirmations.description}
+              Quote: ${affirmations.description}
             </div>
             <div class="affirmations-emoji">
               ${affirmations.emoji}
             </div>
             <div class="affirmations-author">
-              Rating: ${affirmations.author}
+              Author: ${affirmations.author}
             </div>
           </div>
           <button class="add-to-favorites-button button-primary js-add-to-favorites" 

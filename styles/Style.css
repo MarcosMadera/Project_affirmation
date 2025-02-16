@@ -1,0 +1,76 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #A8E6CF, #D3CCE3); /* Initial gradient */
+    animation: changeBackground 225s infinite linear; /* 15 colors × 15s each */
+    transition: background 1s ease-in-out;
+    padding: 20px;
+  }
+  
+  /* Affirmations container */
+  .affirmations-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .affirmations-container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Text styling */
+  .affirmations-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .affirmations-category {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .affirmations-description,
+  .affirmations-author {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  /* Button styling */
+  .add-to-favorites-button {
+    background: #FFABAB;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-to-favorites-button:hover {
+    background: #FF8C8C;
+  }
+  
+  /* Background animation with 15 colors, each lasting 15 seconds */
+  @keyframes changeBackground {
+    0% { background: linear-gradient(120deg, #A8E6CF, #D3CCE3); }  /* Mint Green & Lavender */
+    6.67% { background: linear-gradient(120deg, #FFD3B6, #FFAAA5); }  /* Soft Peach & Rose */
+    13.34% { background: linear-gradient(120deg, #A2D2FF, #CDB4DB); } /* Sky Blue & Lilac */
+    20% { background: linear-gradient(120deg, #FDE2E4, #FFC6FF); } /* Blush Pink & Pastel Purple */
+    26.67% { background: linear-gradient(120deg, #B5EAD7, #E2F0CB); } /* Light Aqua & Sage Green */
+    33.34% { background: linear-gradient(120deg, #FFDAC1, #FF9AA2); } /* Warm Apricot & Soft Coral */
+    40% { background: linear-gradient(120deg, #C6DEF1, #F7D1CD); } /* Cool Blue & Pale Pink */
+    46.67% { background: linear-gradient(120deg, #D4A5A5, #E4C1F9); } /* Dusty Rose & Lavender */
+    53.34% { background: linear-gradient(120deg, #FAE3D9, #BBDED6); } /* Light Peach & Soft Teal */
+    60% { background: linear-gradient(120deg, #E2F0CB, #FFB7B2); } /* Pastel Green & Coral Pink */
+    66.67% { background: linear-gradient(120deg, #B5EAD7, #C7CEEA); } /* Mint & Soft Blue */
+    73.34% { background: linear-gradient(120deg, #F3C5C5, #F7D1CD); } /* Soft Red & Warm Beige */
+    80% { background: linear-gradient(120deg, #A1E3D8, #C8D5B9); } /* Cool Teal & Earthy Green */
+    86.67% { background: linear-gradient(120deg, #FFC3A0, #FFB6C1); } /* Warm Peach & Soft Pink */
+    93.34% { background: linear-gradient(120deg, #A8E6CF, #D3CCE3); } /* Back to Mint & Lavender */
+    100% { background: linear-gradient(120deg, #A8E6CF, #D3CCE3); } /* Ensures smooth looping */
+  }
+  
