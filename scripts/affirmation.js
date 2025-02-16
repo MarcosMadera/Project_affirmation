@@ -36,17 +36,24 @@ export function handleAddToFavorites(event) {
     if (!event.target.classList.contains('js-add-to-favorites')) return;
 
   
-    const affirmationId = event.target.dataset.affirmationId;
+    const affirmationId = event.target.dataset.affirmationsId;
+    console.log(event.target.innerHTML);
+    
     const favoritesCount = document.getElementById('js-favorites-count');
   
-    const alreadyFavorite = favorites.some((fav) => fav.affirmationIdId === affirmationId);
+    const alreadyFavorite = favorites.some((fav) => fav.affirmationId === affirmationId);
     if (!alreadyFavorite) {
       favorites.push({ affirmationId });
       favoritesCount.textContent = favorites.length;
+      event.target.innerHTML = "Remove from favorites"
       //update the amount
       alert('Affirmation added to favorites!');
     } else {
-      alert('Affirmation is already in favorites.');
+        let newFavorites = favorites.filter((favorite) => favorite.affirmationId != affirmationId)
+        favorites = newFavorites
+        event.target.innerHTML = "add to favorites"
+        favoritesCount.textContent = favorites.length
+      alert('Affirmation is removed from favorites');
     }
   }
 
