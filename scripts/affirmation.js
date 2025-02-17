@@ -80,6 +80,7 @@ export function handleSearchAffirmation(event) {
   } else {  //the button says clear Search
     isSearchMode = false;
     searchInput.value = "";
-    renderAffirmations(affirmations);
+     renderAffirmations(affirmations);
+    event.target.innerHTML = "Search";
   }
 }
