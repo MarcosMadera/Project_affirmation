@@ -33,6 +33,7 @@ export function renderAffirmations(listAffirmations) {
 }
  // Handle adding movies to favorites
 export function handleAddToFavorites(event) {
+
     if (!event.target.classList.contains('js-add-to-favorites')) return;
 
   
@@ -51,23 +52,34 @@ export function handleAddToFavorites(event) {
     } else {
         let newFavorites = favorites.filter((favorite) => favorite.affirmationId != affirmationId)
         favorites = newFavorites
-        event.target.innerHTML = "add to favorites"
+        event.target.innerHTML = "Add to favorites"
         favoritesCount.textContent = favorites.length
       alert('Affirmation is removed from favorites');
     }
   }
+  //are we in search mode yet? they haven't clicked button yet
+let isSearchMode = false;
 
   // Handle search functionality
-export function handleSearchAffirmation() {
+export function handleSearchAffirmation(event) {
+
     const searchInput = document.querySelector('.search-bar');
-    const searchValue = searchInput.value.trim().toLowerCase();
-  
-    const filteredAffirmations = affirmations.filter((affirmation) =>
-      affirmation.title.toLowerCase().includes(searchValue)
-    //got through each title and convert to lower case.
-    //does the lowercase title contain the lowercase search value.
-    //if yes, add to filteredAffirmations.
-    );
-  
-    renderAffirmations(filteredAffirmations);
+    let searchValue = searchInput.value.trim().toLowerCase();
+//the button says search
+    if(!isSearchMode) { //search is false  //can be isSearchMode != true
+        isSearchMode = true; //need to make it true so that it's not false
+        event.target.innerHTML = "Clear Search" 
+        const filteredAffirmations = affirmations.filter((affirmation) =>
+        affirmation.title.toLowerCase().includes(searchValue)
+        //got through each title and convert to lower case.
+        //does the lowercase title contain the lowercase search value.
+        //if yes, add to filteredAffirmations.
+        );
+    
+        renderAffirmations(filteredAffirmations);
+  } else {  //the button says clear Search
+    isSearchMode = false;
+    searchInput.value = "";
+    renderAffirmations(affirmations);
   }
+}
