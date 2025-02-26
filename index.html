@@ -10,11 +10,15 @@
 <body>
     
     <!-- Modal content -->
- <!-- Button to open modal -->
+
+    <!-- Button to open modal -->
 <button id="openModalBtn">Add New Affirmation</button>
 
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="addAffirmationModal" class="modal"> <!-- Changed ID here -->
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Enter Details</h2>
@@ -38,8 +42,7 @@
         </form>
     </div>
 </div>
-    
-    
+
     
 
     <div >Favorites Count:<span id="js-favorites-count">0</span></div>
@@ -47,10 +50,9 @@
     <button class="search-btn">Search</button> 
     <div class="js-affirmations-grid"></div>
 
-    <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
 
-<!-- The Modal -->
+
+<!--The Modal-->
 <div id="myModal" class="modal">
 
     <script type="module" src="./initial.js"></script>
