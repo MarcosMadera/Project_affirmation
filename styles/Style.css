@@ -22,7 +22,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 #subtitle {
-  font-size: 36px; /* Set the font size */
+  font-size: 30px; /* Set the font size */
   font-family: 'Dancing Script', cursive; /* Choose a font */
   color: #333; /* Set the text color */
   text-align: center; /* Align the text to the center */
