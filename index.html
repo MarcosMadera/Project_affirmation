@@ -6,83 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styles/Style.css">
 
-    <style>
-        body {font-family: Arial, Helvetica, sans-serif;}
-        
-        /* The Modal (background) */
-        .modal {
-          display: none; /* Hidden by default */
-          position: fixed; /* Stay in place */
-          z-index: 1; /* Sit on top */
-          padding-top: 100px; /* Location of the box */
-          left: 0;
-          top: 0;
-          width: 100%; /* Full width */
-          height: 100%; /* Full height */
-          overflow: auto; /* Enable scroll if needed */
-          background-color: rgb(0,0,0); /* Fallback color */
-          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        }
-        
-        /* Modal Content */
-        .modal-content {
-          background-color: #fefefe;
-          margin: auto;
-          padding: 20px;
-          border: 1px solid #888;
-          width: 80%;
-        }
-        
-        /* The Close Button */
-        .close {
-          color: #aaaaaa;
-          float: right;
-          font-size: 28px;
-          font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-          color: #000;
-          text-decoration: none;
-          cursor: pointer;
-        }
-        </style>
 </head>
 <body>
     
     <!-- Modal content -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Enter Details</h2>
-            <form id="quoteForm">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-    
-                <label for="category">Category:</label>
-                <input type="text" id="category" name="category" required>
-    
-                <label for="quote">Quote:</label>
-                <div class="input-group">
-                    <input type="text" id="quote" name="quote" required>
-                    <button type="button" onclick="fetchQuote()">🔍</button>
-                </div>
-    
-                <label for="emoji">Emoji:</label>
-                <div class="input-group">
-                    <input type="text" id="emoji" name="emoji" required>
-                    <button type="button" onclick="fetchEmoji()">😃</button>
-                </div>
-    
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="author" required>
-    
-                <button type="submit">Submit</button>
-            </form>
-            <div id="output"></div>
-        </div>
+ <!-- Button to open modal -->
+<button id="openModalBtn">Add New Affirmation</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter Details</h2>
+        <form id="quoteForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+
+            <label for="quote">Quote:</label>
+            <input type="text" id="quote" name="quote" required>
+
+            <label for="emoji">Emoji:</label>
+            <input type="text" id="emoji" name="emoji" required>
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+
+            <button type="submit">Submit</button>
+        </form>
     </div>
+</div>
     
     
     

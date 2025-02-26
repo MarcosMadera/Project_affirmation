@@ -114,14 +114,14 @@ export function handleSearchAffirmation(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("myModal");
+  const modal = document.getElementById("addAffirmationModal"); // Updated ID
   const closeButton = document.querySelector(".close");
   const form = document.getElementById("quoteForm");
 
-  // Open modal function (if you need a trigger)
-  function openModal() {
-      modal.style.display = "flex";
-  }
+  // Open modal function
+  document.getElementById("openModalBtn").onclick = function() { // Use the correct button ID
+    modal.style.display = "flex";
+  };
 
   // Close modal when clicking "X"
   closeButton.addEventListener("click", () => {
@@ -155,28 +155,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Fetch random quote
-async function fetchQuote() {
-  try {
-      const response = await fetch("https://api.quotable.io/random");
-      const data = await response.json();
-      document.getElementById("quote").value = data.content;
-      document.getElementById("author").value = data.author;
-      updateOutput();
-  } catch (error) {
-      console.error("Error fetching quote:", error);
-  }
-}
 
-// Fetch random emoji
-async function fetchEmoji() {
-  try {
-      const response = await fetch("https://emoji-api.com/emojis?access_key=YOUR_API_KEY");
-      const data = await response.json();
-      const randomEmoji = data[Math.floor(Math.random() * data.length)].character;
-      document.getElementById("emoji").value = randomEmoji;
-      updateOutput();
-  } catch (error) {
-      console.error("Error fetching emoji:", error);
-  }
-}
+// // Fetch random quote
+// async function fetchQuote() {
+//   try {
+//       const response = await fetch("https://api.quotable.io/random");
+//       const data = await response.json();
+//       document.getElementById("quote").value = data.content;
+//       document.getElementById("author").value = data.author;
+//       updateOutput();
+//   } catch (error) {
+//       console.error("Error fetching quote:", error);
+//   }
+// }
+
+// // Fetch random emoji
+// async function fetchEmoji() {
+//   try {
+//       const response = await fetch("https://emoji-api.com/emojis?access_key=YOUR_API_KEY");
+//       const data = await response.json();
+//       const randomEmoji = data[Math.floor(Math.random() * data.length)].character;
+//       document.getElementById("emoji").value = randomEmoji;
+//       updateOutput();
+//   } catch (error) {
+//       console.error("Error fetching emoji:", error);
+//   }
+// }

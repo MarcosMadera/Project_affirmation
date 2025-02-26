@@ -75,82 +75,45 @@ body {
   }
   
 
- /* The Modal (background) */
+/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 50%;
-  top: 50%;
-  width: 45%; /* Adjust width */
+  left: 25%;
+  top: 25%;
+  width: 50%; /* Adjusted width */
   height: auto; /* Auto height based on content */
-  transform: translate(-50%, -50%); /* Centering the modal */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  border-radius: 25px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-  position: relative;
-  background-color: #a37fc0;
-  padding: 25px;
+  background: rgb(130, 11, 241);
+  padding: 20px;
   border-radius: 25px;
-  width: 100%; /* Full width of modal container */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 75%;
+  text-align: center;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
 
 /* Add Animation */
 @keyframes animatetop {
-  from {top: -300px; opacity: 0;}
-  to {top: 0; opacity: 1;}
-}
-
-/* The Close Button */
-.close {
-  color: #fff;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-}
-
-/* Modal Header */
-.modal-header {
-  padding: 10px 16px;
-  background-color: #202e05;
-  color: white;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-
-/* Modal Body */
-.modal-body {
-  padding: 20px;
-}
-
-/* Modal Footer */
-.modal-footer {
-  padding: 15px;
-  background-color: yellow;
-  color: white;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  from { top: -300px; opacity: 0; }
+  to { top: 0; opacity: 1; }
 }
 
 /* Input fields */
 input {
   display: block;
-  width: 96%;
+  width: 90%;
   padding: 10px;
-  margin: 8px 0;
+  margin: 8px auto;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -168,4 +131,19 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
 }
