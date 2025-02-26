@@ -74,3 +74,98 @@ body {
     100% { background: linear-gradient(120deg, #A8E6CF, #D3CCE3); } /* Ensures smooth looping */
   }
   
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  width: 45%; /* Adjust width */
+  height: auto; /* Auto height based on content */
+  transform: translate(-50%, -50%); /* Centering the modal */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  background-color: #a37fc0;
+  padding: 25px;
+  border-radius: 25px;
+  width: 100%; /* Full width of modal container */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0;}
+  to {top: 0; opacity: 1;}
+}
+
+/* The Close Button */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 10px 16px;
+  background-color: #202e05;
+  color: white;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 20px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 15px;
+  background-color: yellow;
+  color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* Input fields */
+input {
+  display: block;
+  width: 96%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
