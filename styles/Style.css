@@ -6,8 +6,40 @@ body {
     transition: background 1s ease-in-out;
     padding: 20px;
   }
-  
-  /* Affirmations container */
+  #title {
+    font-size: 36px; /* Set the font size */
+    font-family: 'Pacifico', cursive; /* Choose a font */
+    color: #333; /* Set the text color */
+    text-align: center; /* Align the text to the center */
+    text-transform: uppercase; /* Transform the text to uppercase */
+    margin-top: 20px; /* Add some space above the title */
+    margin-bottom: 20px; /* Add some space below the title */
+    font-weight: bold; /* Make the text bold */
+    letter-spacing: 2px; /* Add space between the letters */
+    background-color: #f0f0f0; /* Set a background color */
+    padding: 10px; /* Add padding around the text */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+#subtitle {
+  font-size: 36px; /* Set the font size */
+  font-family: 'Dancing Script', cursive; /* Choose a font */
+  color: #333; /* Set the text color */
+  text-align: center; /* Align the text to the center */
+  text-transform: uppercase; /* Transform the text to uppercase */
+  margin-top: 20px; /* Add some space above the title */
+  margin-bottom: 20px; /* Add some space below the title */
+  font-weight: bold; /* Make the text bold */
+  letter-spacing: 2px; /* Add space between the letters */
+  background-color: #f0f0f0; /* Set a background color */
+  padding: 10px; /* Add padding around the text */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+
+/* Affirmations container */
   .affirmations-container {
     background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
     padding: 15px;
