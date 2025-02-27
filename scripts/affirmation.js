@@ -36,15 +36,15 @@ export function renderAffirmations(listAffirmations) {
 let modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+// var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -129,18 +129,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Close modal when clicking outside modal content
-  window.addEventListener("click", (event) => {
-      if (event.target === modal) {
-          modal.style.display = "none";
-      }
-  });
+  // window.addEventListener("click", (event) => {
+  //     if (event.target === modal) {
+  //         modal.style.display = "none";
+  //     }
+  // });
 
   // Close modal on form submit
   form.addEventListener("submit", (event) => {
       event.preventDefault(); // Prevent page reload
-      updateOutput(); // Update the live preview
+      // updateOutput(); // Update the live preview
+      saveFormData(event);
       modal.style.display = "none"; // Close the modal
   });
+function saveFormData(event) {
+
+const form = event.target;
+const userQuote = {
+  id: affirmations.length + 1,
+  title: form.title.value,
+  description: form.quote.value,
+  emoji: form.emoji.value,
+  author: form.author.value,
+  categories: [form.category.value]
+}
+affirmations.push(userQuote);
+renderAffirmations(affirmations);
+// console.log(affirmations);
+// console.log(userQuote);
+
+}
+
 
   function updateOutput() {
       const formData = new FormData(form);
