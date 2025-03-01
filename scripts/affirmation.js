@@ -154,6 +154,7 @@ const userQuote = {
   categories: [form.category.value]
 }
 affirmations.push(userQuote);
+form.reset()
 renderAffirmations(affirmations);
 // console.log(affirmations);
 // console.log(userQuote);

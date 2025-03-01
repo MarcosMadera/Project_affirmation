@@ -7,7 +7,7 @@ body {
     padding: 20px;
   }
   #title {
-    font-size: 36px; /* Set the font size */
+    font-size: 16px; /* Set the font size */
     font-family: 'Pacifico', cursive; /* Choose a font */
     color: #333; /* Set the text color */
     text-align: center; /* Align the text to the center */
