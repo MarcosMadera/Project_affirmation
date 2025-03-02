@@ -14,4 +14,10 @@ affirmationsGrid.addEventListener('click', handleAddToFavorites);
  searchButton.addEventListener('click', handleSearchAffirmation);
 }
 
+// let audio = document.getElementById("audioPlayer");
 
+// // To play the audio
+// audio.play();
+
+// // To pause the audio
+// audio.pause();

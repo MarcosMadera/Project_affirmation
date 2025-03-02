@@ -55,6 +55,20 @@ export function renderAffirmations(listAffirmations) {
 //     isPlaying = !isPlaying;
 // }
 
+let audio = document.getElementById("audioPlayer");
+
+// To play the audio
+// function playAudio() {
+//   audio.play();
+// }
+
+// To pause the audio
+// function pauseAudio() {
+//   audio.pause();
+// }
+
+// Example of calling playAudio() when a button is clicked
+// document.getElementById("playButton").addEventListener("click", playAudio);
 
 
 // Get the modal
