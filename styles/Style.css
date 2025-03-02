@@ -36,6 +36,28 @@ body {
   border-radius: 10px; /* Add rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
+/* audio on/off button */
+/* body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.audio-toggle {
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.audio-toggle:hover {
+  background-color: #005f73;
+} */
+
 
 
 

@@ -31,7 +31,32 @@ export function renderAffirmations(listAffirmations) {
   const affirmationsGrid = document.querySelector('.js-affirmations-grid');
   affirmationsGrid.innerHTML = affirmationsHTML;
 }
- 
+// music player code
+// let isPlaying = false;
+// const audio = document.getElementById("binaural-audio");
+// const button = document.querySelector(".audio-toggle");
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     if (!audio.canPlayType("audio/wav")) {
+//         alert("Your browser may not support WAV files. Consider using Google Chrome for better compatibility.");
+//     }
+// });
+
+// function toggleAudio() {
+//     if (isPlaying) {
+//         audio.pause();
+//         button.textContent = "Play Music";
+//     } else {
+//         audio.play().catch(error => {
+//             alert("Audio playback failed. Ensure your browser allows autoplay or click to start.");
+//         });
+//         button.textContent = "Pause Music";
+//     }
+//     isPlaying = !isPlaying;
+// }
+
+
+
 // Get the modal
 let modal = document.getElementById("myModal");
 
