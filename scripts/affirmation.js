@@ -33,57 +33,29 @@ export function renderAffirmations(listAffirmations) {
 }
 // music player code
 // let isPlaying = false;
-// const audio = document.getElementById("binaural-audio");
-// const button = document.querySelector(".audio-toggle");
+const audio = new Audio ("../sunrise.mp3");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     if (!audio.canPlayType("audio/wav")) {
-//         alert("Your browser may not support WAV files. Consider using Google Chrome for better compatibility.");
-//     }
-// });
-
-// function toggleAudio() {
-//     if (isPlaying) {
-//         audio.pause();
-//         button.textContent = "Play Music";
-//     } else {
-//         audio.play().catch(error => {
-//             alert("Audio playback failed. Ensure your browser allows autoplay or click to start.");
-//         });
-//         button.textContent = "Pause Music";
-//     }
-//     isPlaying = !isPlaying;
-// }
-
-let audio = document.getElementById("audioPlayer");
 
 // To play the audio
-// function playAudio() {
-//   audio.play();
-// }
+export function playAudio() {
+
+audio.play();
+console.log(audio, " should be playing")
+}
 
 // To pause the audio
-// function pauseAudio() {
-//   audio.pause();
-// }
-
-// Example of calling playAudio() when a button is clicked
-// document.getElementById("playButton").addEventListener("click", playAudio);
+function pauseAudio() {
+  audio.pause();
+}
 
 
 // Get the modal
 let modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -142,12 +114,13 @@ export function handleSearchAffirmation(event) {
         //does the lowercase title contain the lowercase search value.
         //if yes, add to filteredAffirmations.
         );
-    
+    playAudio()
         renderAffirmations(filteredAffirmations);
   } else {  //the button says clear Search
     isSearchMode = false;
     searchInput.value = "";
     event.target.innerHTML = "Search";
+    pauseAudio();
      renderAffirmations(affirmations);
   }
 }
@@ -167,17 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "none";
   });
 
-  // Close modal when clicking outside modal content
-  // window.addEventListener("click", (event) => {
-  //     if (event.target === modal) {
-  //         modal.style.display = "none";
-  //     }
-  // });
-
+ 
   // Close modal on form submit
   form.addEventListener("submit", (event) => {
       event.preventDefault(); // Prevent page reload
-      // updateOutput(); // Update the live preview
       saveFormData(event);
       modal.style.display = "none"; // Close the modal
   });
@@ -201,42 +167,7 @@ renderAffirmations(affirmations);
 }
 
 
-  function updateOutput() {
-      const formData = new FormData(form);
-      document.getElementById("output").innerHTML = `
-          <h3>Live Preview</h3>
-          <p><strong>Title:</strong> ${formData.get("title")}</p>
-          <p><strong>Category:</strong> ${formData.get("category")}</p>
-          <p><strong>Quote:</strong> ${formData.get("quote")}</p>
-          <p><strong>Emoji:</strong> ${formData.get("emoji")}</p>
-          <p><strong>Author:</strong> ${formData.get("author")}</p>
-      `;
-  }
-});
+ });
 
 
-// // Fetch random quote
-async function fetchQuote() {
-  try {
-      const response = await fetch("https://api.quotable.io/random");
-      const data = await response.json();
-      document.getElementById("quote").value = data.content;
-      document.getElementById("author").value = data.author;
-      updateOutput();
-  } catch (error) {
-      console.error("Error fetching quote:", error);
-  }
-}
 
-// // Fetch random emoji
-async function fetchEmoji   () {
-  try {
-      const response = await fetch("https://emoji-api.com/emojis?access_key=YOUR_API_KEY");
-      const data = await response.json();
-      const randomEmoji = data[Math.floor(Math.random() * data.length)].character;
-      document.getElementById("emoji").value = randomEmoji;
-      updateOutput();
-  } catch (error) {
-      console.error("Error fetching emoji:", error);
-  }
-}
