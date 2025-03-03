@@ -163,10 +163,7 @@ form.reset()
 renderAffirmations(affirmations);
 // console.log(affirmations);
 // console.log(userQuote);
-
 }
-
-
  });
 
 
